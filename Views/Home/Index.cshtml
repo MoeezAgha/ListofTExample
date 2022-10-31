@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model ListOfPagination.Pages_Pagination.ListOfPagination<string>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@foreach (var test in Model.Data)
+{
+    <div>@test</div>
+}
+
+<ListOfPaginationTag  button-color="red"  delta="4" last-page="@Model.PageCount" current-page="@Model.CurrentPage"  size="@Model.PageSize" total-count="@Model.RowCount">
+    
+
+</ListOfPaginationTag>
